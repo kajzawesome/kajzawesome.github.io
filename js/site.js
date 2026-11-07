@@ -115,41 +115,6 @@
     });
   }
 
-  // Paloro flashcard demo
-  var deck = [
-    ["saudade", "noun", "a deep longing for someone or something you love", "“Tô com saudade de você.” · I miss you."],
-    ["gambiarra", "noun", "a clever makeshift fix (every sysadmin's specialty)", "“Isso é uma gambiarra, mas funciona.” · It's a hack, but it works."],
-    ["cafuné", "noun", "running your fingers through someone's hair", "“Ela fez cafuné no filho.” · She stroked her son's hair."],
-    ["beleza", "interjection", "all good / sounds great (also: beauty)", "“Amanhã às dez? Beleza!” · Tomorrow at ten? Sounds good!"],
-    ["jeitinho", "noun", "finding a creative way around a problem", "“Sempre tem um jeitinho.” · There's always a way."],
-    ["legal", "adjective", "cool, nice", "“Que legal!” · How cool!"],
-    ["padaria", "noun", "bakery, where pão de queijo lives", "“Vamos na padaria?” · Shall we go to the bakery?"],
-    ["cabaça", "noun", "gourd", "“A cabaça virou um berimbau.” · The gourd became a berimbau."]
-  ];
-  var card = document.getElementById("pw-card");
-  if (card) {
-    var idx = 0;
-    var $ = function (id) { return document.getElementById(id); };
-    var show = function () {
-      var c = deck[idx];
-      $("pw-word").textContent = c[0];
-      $("pw-pos").textContent = c[1];
-      $("pw-trans").textContent = c[2];
-      $("pw-ex").textContent = c[3];
-      $("pw-count").textContent = (idx + 1) + " / " + deck.length;
-      $("pw-fill").style.width = ((idx + 1) / deck.length * 100) + "%";
-    };
-    card.addEventListener("click", function () { card.classList.toggle("flipped"); });
-    document.getElementById("pw-rate").addEventListener("click", function (e) {
-      if (e.target.tagName !== "BUTTON") return;
-      var wasFlipped = card.classList.contains("flipped");
-      card.classList.remove("flipped");
-      // swap the word once the card has turned back to the front
-      setTimeout(function () { idx = (idx + 1) % deck.length; show(); }, wasFlipped && !reduceMotion ? 250 : 0);
-    });
-    show();
-  }
-
   var year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
 })();

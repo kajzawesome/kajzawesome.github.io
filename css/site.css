@@ -304,66 +304,8 @@ a.tile-lime:hover { border-color: var(--text); }
   transition: transform 0.35s ease, border-color 0.35s ease;
 }
 
-/* ---------- Paloro widget (mirrors the app's dark navy UI) ---------- */
-.pw { color: #e6edf3; font-family: var(--font-body); }
-.pw-body {
-  padding: 18px; display: grid; gap: 14px;
-  background: radial-gradient(400px 200px at 50% 0%, rgba(0, 200, 83, 0.12), transparent 70%), #0b1220;
-}
-.pw-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-.pw-brand { display: flex; align-items: center; gap: 8px; font-weight: 700; color: #22c55e; letter-spacing: -0.02em; }
-.pw-brand img { border-radius: 6px; }
-.pw-progress { display: flex; align-items: center; gap: 10px; font-size: 0.75rem; color: #8b949e; }
-.pw-bar { width: 90px; height: 6px; border-radius: 99px; background: #1f2937; overflow: hidden; }
-.pw-bar span { display: block; height: 100%; width: 12.5%; background: #22c55e; border-radius: inherit; transition: width 0.4s ease; }
-
-.pw-card {
-  position: relative; display: block; width: 100%; min-height: 190px; padding: 0;
-  border: 0; background: transparent; cursor: pointer; perspective: 1000px; color: inherit; font: inherit;
-}
-.pw-face {
-  position: absolute; inset: 0; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 8px;
-  padding: 22px; border-radius: 16px; text-align: left;
-  backface-visibility: hidden; -webkit-backface-visibility: hidden;
-  transition: transform 0.5s cubic-bezier(.3, .7, .2, 1);
-}
-.pw-front { background: #1c1410; border: 1px solid #7c4a12; }
-.pw-back { background: #0f1f17; border: 1px solid #166534; transform: rotateY(180deg); }
-.pw-card.flipped .pw-front { transform: rotateY(-180deg); }
-.pw-card.flipped .pw-back { transform: rotateY(0); }
-.pw-card:hover .pw-face { border-color: #f59e0b; }
-.pw-card.flipped:hover .pw-back { border-color: #22c55e; }
-.pw-tag { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: #fbbf24; }
-.pw-back .pw-tag { color: #4ade80; }
-.pw-word { font: 800 clamp(2rem, 4vw, 2.6rem)/1 var(--font-display); letter-spacing: -0.03em; color: #fff; }
-.pw-hint { font-size: 0.85rem; font-style: italic; color: #fbbf24; }
-.pw-trans { font: 700 1.25rem/1.3 var(--font-display); color: #fff; }
-.pw-ex { font-size: 0.88rem; color: #9ca3af; }
-
-.pw-rate { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
-.pw-rate button {
-  padding: 10px; border-radius: 10px; font: 600 0.88rem/1 var(--font-body); cursor: pointer;
-  border: 1px solid #263041; background: #111827; color: #e6edf3; transition: background 0.2s, border-color 0.2s, transform 0.15s;
-}
-.pw-rate button:hover { transform: translateY(-1px); }
-.pw-rate [data-r="again"]:hover { border-color: #ef4444; background: #2a1215; }
-.pw-rate [data-r="good"]:hover { border-color: #22c55e; background: #0f2418; }
-.pw-rate [data-r="easy"]:hover { border-color: #3b82f6; background: #0f1a2e; }
-
-.pw-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
-.pw-tiles a {
-  display: flex; flex-direction: column; gap: 2px; padding: 12px; border-radius: 12px;
-  color: #fff; font-weight: 700; font-size: 0.9rem; transition: transform 0.2s ease, filter 0.2s;
-}
-.pw-tiles a span { font-weight: 400; font-size: 0.72rem; opacity: 0.85; }
-.pw-tiles a:hover { transform: translateY(-2px); filter: brightness(1.1); text-decoration: none; }
-.t-green { background: linear-gradient(135deg, #00c853, #059669); }
-.t-blue { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
-.t-purple { background: linear-gradient(135deg, #a855f7, #6d28d9); }
-.t-orange { background: linear-gradient(135deg, #f97316, #ea580c); }
-.t-pink { background: linear-gradient(135deg, #f43f5e, #db2777); }
-.t-violet { background: linear-gradient(135deg, #8b5cf6, #6d28d9); }
-.pw-caption { text-align: center; font-size: 0.78rem; color: var(--muted); margin-top: 14px; position: relative; z-index: 1; }
+.browser:hover { transform: translateY(-6px); border-color: var(--lime); text-decoration: none; }
+.browser img { width: 100%; height: auto; }
 .browser-bar { display: flex; align-items: center; gap: 7px; padding: 12px 14px; background: #161b22; border-bottom: 1px solid #262c36; }
 .browser-bar i { width: 11px; height: 11px; border-radius: 50%; background: #3a404a; }
 .browser-bar i:first-child { background: #ff5f57; } .browser-bar i:nth-child(2) { background: #febc2e; } .browser-bar i:nth-child(3) { background: #28c840; }
