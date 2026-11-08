@@ -466,3 +466,18 @@ a.tile-lime:hover { border-color: var(--text); }
   .hero-ctas .btn { flex: 1 1 auto; justify-content: center; }
   .float-b { display: none; }
 }
+
+/* LinkedIn post embeds */
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+.posts iframe {
+  width: 100%;
+  max-width: 504px;
+  border: 0;
+  border-radius: 12px;
+  background: #fff;
+}
